@@ -1,97 +1,122 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Aviation Juego Quiz
 
-# Getting Started
+A React Native quiz game that tests your knowledge about different types of aircraft and aviation.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## Features
 
-## Step 1: Start Metro
+- **Interactive Quiz**: 11 carefully crafted questions about aviation
+- **Beautiful UI**: Modern, aviation-themed design with smooth animations
+- **Score Tracking**: Real-time score display and final results
+- **Responsive Design**: Works on both iOS and Android devices
+- **User-Friendly**: Intuitive navigation and clear feedback
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## Quiz Questions
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+The app includes 11 questions covering various aircraft types:
 
-```sh
-# Using npm
-npm start
+1. **Passenger Aircraft** - Long-distance passenger transport
+2. **Biplane** - Aircraft with two wings stacked vertically
+3. **Fighter** - Air combat aircraft
+4. **World War I Aircraft** - Historical biplane usage
+5. **Aerobatic Aircraft** - Aircraft for aerial maneuvers
+6. **Seaplane** - Water takeoff and landing capability
+7. **Piston Trainer Aircraft** - Pilot training aircraft
+8. **Search and Rescue Aircraft** - Emergency response aircraft
+9. **Civilian Observation Aircraft** - Weather monitoring and observation
+10. **Modern Strategic Bomber** - Long-range strike aircraft
+11. **Anti-submarine Aircraft** - Submarine hunting aircraft
 
-# OR using Yarn
-yarn start
+## Getting Started
+
+### Prerequisites
+
+- Node.js (version 18 or higher)
+- React Native CLI
+- Android Studio (for Android development)
+- Xcode (for iOS development, macOS only)
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd aviatorQuiz
 ```
 
-## Step 2: Build and run your app
-
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
+2. Install dependencies:
+```bash
+npm install
 ```
 
-### iOS
-
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
+3. Start the Metro bundler:
+```bash
+npx react-native start
 ```
 
-Then, and every time you update your native dependencies, run:
+4. Run the app:
 
-```sh
-bundle exec pod install
+For Android:
+```bash
+npx react-native run-android
 ```
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
+For iOS:
+```bash
+npx react-native run-ios
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+## How to Play
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+1. **Start the Game**: Tap "New Game" on the main menu
+2. **Answer Questions**: Select the correct answer from the four options
+3. **See Results**: Get immediate feedback on your answer
+4. **Track Progress**: Monitor your score as you progress
+5. **Complete the Quiz**: Finish all 11 questions to see your final score
+6. **Play Again**: Restart the quiz or return to the main menu
 
-## Step 3: Modify your app
+## Scoring System
 
-Now that you have successfully run the app, let's make changes!
+- **80-100%**: Excellent! You're an aviation expert!
+- **60-79%**: Good job! You know your aircraft!
+- **40-59%**: Not bad! Keep learning about aviation!
+- **0-39%**: Keep studying! Aviation is fascinating!
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+## Technical Details
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+- **Framework**: React Native 0.81.0
+- **Language**: TypeScript
+- **Navigation**: State-based navigation (no external navigation library)
+- **Styling**: React Native StyleSheet
+- **State Management**: React Hooks (useState)
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+## Project Structure
 
-## Congratulations! :tada:
+```
+aviatorQuiz/
+├── src/
+│   ├── components/
+│   │   ├── GameMenu.tsx      # Main menu component
+│   │   └── GameScreen.tsx    # Quiz game screen
+│   └── data/
+│       └── quizData.ts       # Quiz questions and answers
+├── App.tsx                   # Main app component
+└── README.md                 # This file
+```
 
-You've successfully run and modified your React Native App. :partying_face:
+## Contributing
 
-### Now what?
+Feel free to contribute to this project by:
+- Adding more quiz questions
+- Improving the UI/UX
+- Adding new features
+- Fixing bugs
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+## License
 
-# Troubleshooting
+This project is open source and available under the [MIT License](LICENSE).
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+## Acknowledgments
 
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+- Aviation enthusiasts and experts for the quiz content
+- React Native community for the excellent framework
+- Aircraft images and information from various aviation resources
