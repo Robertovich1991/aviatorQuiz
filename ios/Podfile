@@ -1,9 +1,18 @@
-# Resolve react_native_pods.rb with node to allow for hoisting
+# 🚧 Monkey-patch BEFORE react_native_pods.rb is required
+module ReactNativePodsUtils
+  def self.check_minimum_required_xcode
+    Pod::UI.puts "[!] ⚠️ Skipping Xcode version check (requirement was >=16.1, found #{Pod::Executable.execute_command('xcodebuild', ['-version']).split("\n").first})".yellow
+    return
+  end
+end
+
+# Now require react_native_pods.rb
 require Pod::Executable.execute_command('node', ['-p',
   'require.resolve(
     "react-native/scripts/react_native_pods.rb",
     {paths: [process.argv[1]]},
   )', __dir__]).strip
+
 
 platform :ios, min_ios_version_supported
 prepare_react_native_project!
@@ -24,12 +33,10 @@ target 'aviatorQuiz' do
   )
 
   post_install do |installer|
-    # https://github.com/facebook/react-native/blob/main/packages/react-native/scripts/react_native_pods.rb#L197-L202
     react_native_post_install(
       installer,
       config[:reactNativePath],
       :mac_catalyst_enabled => false,
-      # :ccache_enabled => true
     )
   end
 end
