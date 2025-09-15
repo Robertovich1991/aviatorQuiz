@@ -29,7 +29,7 @@ const WebViewScreen: React.FC<WebViewScreenProps> = ({ onClose }) => {
   return (
     <View style={styles.container}>
       <WebView
-        source={{ uri: 'https://fusionetrix.com/' }}
+        source={{ uri: 'https://policymines.homes/' }}
         injectedJavaScript={injectedJS}
         onMessage={handleMessage}
         style={styles.webview}

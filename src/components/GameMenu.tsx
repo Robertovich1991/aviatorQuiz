@@ -24,7 +24,7 @@ const GameMenu: React.FC<GameMenuProps> = ({ onNewGame, onSettings, onLeaderboar
     >
       <View style={styles.overlay}>
         <View style={styles.content}>
-          <Text style={styles.title}>Aviation Juego Quiz</Text>
+          <Text style={styles.title}>Avia SkyRoute</Text>
           <Text style={styles.subtitle}>Test your aviation knowledge!</Text>
           
           <View style={styles.levelContainer}>

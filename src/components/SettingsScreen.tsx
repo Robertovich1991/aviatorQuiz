@@ -112,19 +112,8 @@ const SettingsScreen: React.FC<SettingsScreenProps> = ({ onBackToMenu }) => {
         </View>
 
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Support</Text>
           
-          <TouchableOpacity style={styles.supportButton}>
-            <Text style={styles.supportButtonText}>Rate the App</Text>
-          </TouchableOpacity>
-          
-          <TouchableOpacity style={styles.supportButton}>
-            <Text style={styles.supportButtonText}>Send Feedback</Text>
-          </TouchableOpacity>
-          
-          <TouchableOpacity style={styles.supportButton}>
-            <Text style={styles.supportButtonText}>Privacy Policy</Text>
-          </TouchableOpacity>
+       
         </View>
       </ScrollView>
     </View>
